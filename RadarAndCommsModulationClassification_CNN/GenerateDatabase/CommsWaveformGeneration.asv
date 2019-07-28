@@ -1,0 +1,96 @@
+
+clc;
+
+modulationTypes = 
+categorical(["LFM","Rect","Barker","Frank","P1","P2","P3","P4","Zadoff-Chu"]);
+% categorical(["BPSK","QPSK","8PSK","PAM4","16QAM","64QAM","GFSK","CPFSK","2FSK","8FSK"]);
+%    "GFSK","CPFSK","2FSK","8FSK"]);
+%  "BPSK","QPSK","8PSK","PAM4","16QAM","64QAM",...
+    
+numModulationTypes = length(modulationTypes);
+numFramesPerModType = 10;
+
+percentTrainingSamples = 80;
+percentValidationSamples = 10;
+percentTestSamples = 10;
+
+sps = 8;                % Samples per symbol
+spf = 512;             % Samples per frame
+symbolsPerFrame = spf / sps;
+% fs = 200e3;             % Sample rate
+fs = 1e8;             % Sample rate
+fc = [900e6 100e6];     % Center frequencies
+
+frameStore = helperModClassFrameStore(...
+  numFramesPerModType*numModulationTypes,spf,modulationTypes);
+
+helperRadarWaveformGeneration(frameStore);
+% helperCommsWaveformGeneration(frameStore);
+
+%%
+[mcfsTraining,mcfsValidation,mcfsTest] = splitData(frameStore,...
+  [percentTrainingSamples,percentValidationSamples,percentTestSamples]);
+% [rxTraining,rxTrainingLabel] = get(mcfsTraining);
+% [rxValidation,rxValidationLabel] = get(mcfsValidation);
+% [rxTest,rxTestLabel] = get(mcfsTest);
+
+% Put the data in [1xspfx2] format
+mcfsTraining.OutputFormat = "IQAsPages";
+[rxTraining,rxTrainingLabel] = get(mcfsTraining);
+mcfsValidation.OutputFormat = "IQAsPages";
+[rxValidation,rxValidationLabel] = get(mcfsValidation);
+mcfsTest.OutputFormat = "IQAsPages";
+[rxTest,rxTestLabel] = get(mcfsTest);
+
+%% 
+
+% Plot the amplitude of the real and imaginary parts of the example frames
+% against the sample number
+figure
+
+plotTimeDomain(rxTest,rxTestLabel,modulationTypes,fs)
+
+%%
+% Plot a spectrogram of the example frames
+% figure
+% plotSpectrogram(rxTest,rxTestLabel,modulationTypes,fs,sps)
+% [wav, modType] = helperCommsWaveformGeneration();
+
+% figure
+% subplot(4,4,1)
+% wvd(wav{find(modType == "BPSK",1)},200e3,'smoothedPseudo')
+% axis square; colorbar off; title('BPSK')
+% subplot(4,4,2)
+% wvd(wav{find(modType == "QPSK",1)},200e3,'smoothedPseudo')
+% axis square; colorbar off; title('QPSK')
+% subplot(4,4,3)
+% wvd(wav{find(modType == "8PSK",1)},200e3,'smoothedPseudo')
+% axis square; colorbar off; title('8PSK')
+% subplot(4,4,4)
+% wvd(wav{find(modType == "2FSK",1)},200e3,'smoothedPseudo')
+% axis square; colorbar off; title('2FSK')
+% subplot(4,4,5)
+% wvd(wav{find(modType == "8FSK",1)},200e3,'smoothedPseudo')
+% axis square; colorbar off; title('8FSK')
+% subplot(4,4,6)
+% wvd(wav{find(clcmodType == "GFSK",1)},200e3,'smoothedPseudo')
+% axis square; colorbar off; title('GFSK')
+% subplot(4,4,7)
+% wvd(wav{find(modType == "CPFSK",1)},200e3,'smoothedPseudo')
+% axis square; colorbar off; title('CPFSK')
+% subplot(4,4,8)
+% wvd(wav{find(modType == "16QAM",1)},200e3,'smoothedPseudo')
+% axis square; colorbar off; title('16QAM')
+% subplot(4,4,9)
+% wvd(wav{find(modType == "64QAM",1)},200e3,'smoothedPseudo')
+% axis square; colorbar off; title('64QAM')
+% subplot(4,4,8)
+% wvd(wav{find(modType == "PAM4",1)},200e3,'smoothedPseudo')
+% axis square; colorbar off; title('4PAM')
+
+% helperGenerateModulationfiles(wav,modType,100e3);
+
+% folders = fullfile('ModulationsDatabase',{'2FSK','8FSK','GFSK','CPFSK','BPSK','QPSK','8PSK','16QAM','64QAM'});
+%'BPSK','QPSK','8PSK','16QAM','64QAM'
+   %,'8PSK', '2FSK','8FSK','GFSK','CPFSK','PAM4'});
+%'16QAM','64QAM',
