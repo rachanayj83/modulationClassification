@@ -9,7 +9,7 @@ SNR  = 20;
 fs = 1e6;
 
 %%
-%  load trainedNet20SNR_1a
+ load trainedNet20SNR_1a
 %% BPSK
 % Set the random number generator to a known state to be able to regenerate
 % the same frames every time the simulation is run
@@ -46,7 +46,7 @@ for frameNo = 1:length(prediction1)
     if contains(char(prediction1(frameNo)), {'BPSK','QPSK','8PSK', '2FSK', '8FSK', 'GFSK', 'CPFSK' ,'16QAM', '64QAM' ,'PAM4'})
      fprintf('%s:%s \n', 'Communication Signal',char(prediction1(frameNo)))
       else if contains(char(prediction1(frameNo)),{'LFM','Rect','Barker','Frank','P1','P2','P3','P4','Zadoff-Chu'})
-       fprintf('%s:%s \n', 'Radar Signal',char(prediction1(frameNo)))
+       fprintf("Radar Signal");
       else 
      fprintf("Unknown Signal");      
           end
@@ -78,7 +78,7 @@ for frameNo = 1:length(estimate2)
     if contains(char(estimate2(frameNo)), {'BPSK','QPSK','8PSK', '2FSK', '8FSK', 'GFSK', 'CPFSK' ,'16QAM', '64QAM' ,'PAM4'})
      fprintf('%s:%s \n', 'Communication Signal',char(estimate2(frameNo)))
       else if contains(char(estimate2(frameNo)),{'LFM','Rect','Barker','Frank','P1','P2','P3','P4','Zadoff-Chu'})
-       fprintf('%s:%s \n', 'Radar Signal',char(estimate2(frameNo)))
+       fprintf("Radar Signal");
         else 
         fprintf("Unknown Signal");      
       end
@@ -119,7 +119,7 @@ for frameNo = 1:length(prediction3)
     if contains(char(prediction3(frameNo)), {'BPSK','QPSK','8PSK', '2FSK', '8FSK', 'GFSK', 'CPFSK' ,'16QAM', '64QAM' ,'PAM4'})
      fprintf('%s:%s \n', 'Communication Signal',char(prediction3(frameNo)))
       else if contains(char(prediction3(frameNo)),{'LFM','Rect','Barker','Frank','P1','P2','P3','P4','Zadoff-Chu'})
-       fprintf('%s:%s \n', 'Radar Signal',char(prediction3(frameNo)))
+       fprintf("Radar Signal");
         else 
         fprintf("Unknown Signal");      
       end
@@ -163,7 +163,7 @@ for frameNo = 1:length(prediction4)
     if contains(char(prediction4(frameNo)), {'BPSK','QPSK','8PSK', '2FSK', '8FSK', 'GFSK', 'CPFSK' ,'16QAM', '64QAM' ,'PAM4'})
      fprintf('%s:%s \n', 'Communication Signal',char(prediction4(frameNo)))
       else if contains(char(prediction4(frameNo)),{'LFM','Rect','Barker','Frank','P1','P2','P3','P4','Zadoff-Chu'})
-       fprintf('%s:%s \n', 'Radar Signal',char(prediction4(frameNo)))
+       fprintf("Radar Signal");
         else 
         fprintf("Unknown Signal");      
       end
@@ -215,7 +215,7 @@ for frameNo = 1:length(prediction5)
     if contains(char(prediction5(frameNo)), {'BPSK','QPSK','8PSK', '2FSK', '8FSK', 'GFSK', 'CPFSK' ,'16QAM', '64QAM' ,'PAM4'})
      fprintf('%s:%s \n', 'Communication Signal',char(prediction5(frameNo)))
       else if contains(char(prediction5(frameNo)),{'LFM','Rect','Barker','Frank','P1','P2','P3','P4','Zadoff-Chu'})
-       fprintf('%s:%s \n', 'Radar Signal',char(prediction5(frameNo)))
+       fprintf("Radar Signal");
         else 
         fprintf("Unknown Signal");      
       end
@@ -268,7 +268,7 @@ for frameNo = 1:length(prediction6)
     if contains(char(prediction6(frameNo)), {'BPSK','QPSK','8PSK', '2FSK', '8FSK', 'GFSK', 'CPFSK' ,'16QAM', '64QAM' ,'PAM4'})
      fprintf('%s:%s \n', 'Communication Signal',char(prediction6(frameNo)))
       else if contains(char(prediction6(frameNo)),{'LFM','Rect','Barker','Frank','P1','P2','P3','P4','Zadoff-Chu'})
-       fprintf('%s:%s \n', 'Radar Signal',char(prediction6(frameNo)))
+       fprintf("Radar Signal");
         else 
         fprintf("Unknown Signal");      
       end
@@ -322,7 +322,7 @@ for frameNo = 1:length(prediction7)
     if contains(char(prediction7(frameNo)), {'BPSK','QPSK','8PSK', '2FSK', '8FSK', 'GFSK', 'CPFSK' ,'16QAM', '64QAM' ,'PAM4'})
      fprintf('%s:%s \n', 'Communication Signal',char(prediction7(frameNo)))
       else if contains(char(prediction7(frameNo)),{'LFM','Rect','Barker','Frank','P1','P2','P3','P4','Zadoff-Chu'})
-       fprintf('%s:%s \n', 'Radar Signal',char(prediction7(frameNo)))
+       fprintf("Radar Signal");
         else 
         fprintf("Unknown Signal");      
       end
@@ -369,7 +369,7 @@ for frameNo = 1:length(prediction8)
     if contains(char(prediction8(frameNo)), {'BPSK','QPSK','8PSK', '2FSK', '8FSK', 'GFSK', 'CPFSK' ,'16QAM', '64QAM' ,'PAM4'})
      fprintf('%s:%s \n', 'Communication Signal',char(prediction8(frameNo)))
       else if contains(char(prediction8(frameNo)),{'LFM','Rect','Barker','Frank','P1','P2','P3','P4','Zadoff-Chu'})
-       fprintf('%s:%s \n', 'Radar Signal',char(prediction8(frameNo)))
+       fprintf("Radar Signal");
         else 
         fprintf("Unknown Signal");      
       end
@@ -413,7 +413,7 @@ for frameNo = 1:length(prediction9)
     if contains(char(prediction9(frameNo)), {'BPSK','QPSK','8PSK', '2FSK', '8FSK', 'GFSK', 'CPFSK' ,'16QAM', '64QAM' ,'PAM4'})
      fprintf('%s:%s \n', 'Communication Signal',char(prediction9(frameNo)))
       else if contains(char(prediction9(frameNo)),{'LFM','Rect','Barker','Frank','P1','P2','P3','P4','Zadoff-Chu'})
-       fprintf('%s:%s \n', 'Radar Signal',char(prediction9(frameNo)))
+       fprintf("Radar Signal");
         else 
         fprintf("Unknown Signal");      
       end
@@ -459,7 +459,7 @@ for frameNo = 1:length(prediction10)
     if contains(char(prediction10(frameNo)), {'BPSK','QPSK','8PSK', '2FSK', '8FSK', 'GFSK', 'CPFSK' ,'16QAM', '64QAM' ,'PAM4'})
      fprintf('%s:%s \n', 'Communication Signal',char(prediction10(frameNo)))
       else if contains(char(prediction10(frameNo)),{'LFM','Rect','Barker','Frank','P1','P2','P3','P4','Zadoff-Chu'})
-       fprintf('%s:%s \n', 'Radar Signal',char(prediction10(frameNo)))
+       fprintf("Radar Signal");
         else 
         fprintf("Unknown Signal");      
       end
@@ -527,7 +527,7 @@ for frameNo = 1:length(prediction11)
     if contains(char(prediction11(frameNo)), {'BPSK','QPSK','8PSK', '2FSK', '8FSK', 'GFSK', 'CPFSK' ,'16QAM', '64QAM' ,'PAM4'})
      fprintf('%s:%s \n', 'Communication Signal',char(prediction11(frameNo)))
       else if contains(char(prediction11(frameNo)),{'LFM','Rect','Barker','Frank','P1','P2','P3','P4','Zadoff-Chu'})
-       fprintf('%s:%s \n', 'Radar Signal',char(prediction11(frameNo)))
+       fprintf("Radar Signal");
         else 
         fprintf("Unknown Signal");      
       end
@@ -593,7 +593,7 @@ for frameNo = 1:length(prediction12)
     if contains(char(prediction12(frameNo)), {'BPSK','QPSK','8PSK', '2FSK', '8FSK', 'GFSK', 'CPFSK' ,'16QAM', '64QAM' ,'PAM4'})
      fprintf('%s:%s \n', 'Communication Signal',char(prediction12(frameNo)))
       else if contains(char(prediction12(frameNo)),{'LFM','Rect','Barker','Frank','P1','P2','P3','P4','Zadoff-Chu'})
-       fprintf('%s:%s \n', 'Radar Signal',char(prediction12(frameNo)))
+       fprintf("Radar Signal");
         else 
         fprintf("Unknown Signal");      
       end
@@ -663,7 +663,7 @@ for frameNo = 1:length(prediction13)
     if contains(char(prediction13(frameNo)), {'BPSK','QPSK','8PSK', '2FSK', '8FSK', 'GFSK', 'CPFSK' ,'16QAM', '64QAM' ,'PAM4'})
      fprintf('%s:%s \n', 'Communication Signal',char(prediction13(frameNo)))
       else if contains(char(prediction13(frameNo)),{'LFM','Rect','Barker','Frank','P1','P2','P3','P4','Zadoff-Chu'})
-       fprintf('%s:%s \n', 'Radar Signal',char(prediction13(frameNo)))
+       fprintf("Radar Signal");
         else 
         fprintf("Unknown Signal");      
       end
@@ -734,7 +734,7 @@ for frameNo = 1:length(prediction14)
     if contains(char(prediction14(frameNo)), {'BPSK','QPSK','8PSK', '2FSK', '8FSK', 'GFSK', 'CPFSK' ,'16QAM', '64QAM' ,'PAM4'})
      fprintf('%s:%s \n', 'Communication Signal',char(prediction14(frameNo)))
       else if contains(char(prediction14(frameNo)),{'LFM','Rect','Barker','Frank','P1','P2','P3','P4','Zadoff-Chu'})
-       fprintf('%s:%s \n', 'Radar Signal',char(prediction14(frameNo)))
+       fprintf("Radar Signal");
         else 
         fprintf("Unknown Signal");      
       end
@@ -806,7 +806,7 @@ for frameNo = 1:length(prediction15)
     if contains(char(prediction15(frameNo)), {'BPSK','QPSK','8PSK', '2FSK', '8FSK', 'GFSK', 'CPFSK' ,'16QAM', '64QAM' ,'PAM4'})
      fprintf('%s:%s \n', 'Communication Signal',char(prediction15(frameNo)))
       else if contains(char(prediction15(frameNo)),{'LFM','Rect','Barker','Frank','P1','P2','P3','P4','Zadoff-Chu'})
-       fprintf('%s:%s \n', 'Radar Signal',char(prediction15(frameNo)))
+       fprintf("Radar Signal");
         else 
         fprintf("Unknown Signal");      
       end
@@ -878,7 +878,7 @@ for frameNo = 1:length(prediction16)
     if contains(char(prediction16(frameNo)), {'BPSK','QPSK','8PSK', '2FSK', '8FSK', 'GFSK', 'CPFSK' ,'16QAM', '64QAM' ,'PAM4'})
      fprintf('%s:%s \n', 'Communication Signal',char(prediction16(frameNo)))
       else if contains(char(prediction16(frameNo)),{'LFM','Rect','Barker','Frank','P1','P2','P3','P4','Zadoff-Chu'})
-       fprintf('%s:%s \n', 'Radar Signal',char(prediction16(frameNo)))
+       fprintf("Radar Signal");
         else 
         fprintf("Unknown Signal");      
       end
@@ -950,7 +950,7 @@ for frameNo = 1:length(prediction17)
     if contains(char(prediction17(frameNo)), {'BPSK','QPSK','8PSK', '2FSK', '8FSK', 'GFSK', 'CPFSK' ,'16QAM', '64QAM' ,'PAM4'})
      fprintf('%s:%s \n', 'Communication Signal',char(prediction17(frameNo)))
       else if contains(char(prediction17(frameNo)),{'LFM','Rect','Barker','Frank','P1','P2','P3','P4','Zadoff-Chu'})
-       fprintf('%s:%s \n', 'Radar Signal',char(prediction17(frameNo)))
+       fprintf("Radar Signal");
         else 
         fprintf("Unknown Signal");      
       end
@@ -1022,7 +1022,7 @@ for frameNo = 1:length(prediction18)
     if contains(char(prediction11(frameNo)), {'BPSK','QPSK','8PSK', '2FSK', '8FSK', 'GFSK', 'CPFSK' ,'16QAM', '64QAM' ,'PAM4'})
      fprintf('%s:%s \n', 'Communication Signal',char(prediction18(frameNo)))
       else if contains(char(prediction18(frameNo)),{'LFM','Rect','Barker','Frank','P1','P2','P3','P4','Zadoff-Chu'})
-       fprintf('%s:%s \n', 'Radar Signal',char(prediction18(frameNo)))
+       fprintf("Radar Signal");
         else 
         fprintf("Unknown Signal");      
       end
@@ -1097,9 +1097,9 @@ unknownFrames = getNNFrames(rx,'Unknown');
 
 for frameNo = 1:length(prediction19)
     if contains(char(prediction19(frameNo)), {'BPSK','QPSK','8PSK', '2FSK', '8FSK', 'GFSK', 'CPFSK' ,'16QAM', '64QAM' ,'PAM4'})
-     fprintf('%s:%s \n', 'Communication Signal',char(prediction19(frameNo)))
-      else if contains(char(prediction19(frameNo)),{'LFM','Rect','Barker','Frank','P1','P2','P3','P4','Zadoff-Chu'})
-       fprintf('%s:%s \n', 'Radar Signal',char(prediction19(frameNo)))
+     fprintf('%s:%s \n', 'Communication Signal',char(prediction11(frameNo)))
+      else if contains(char(prediction11(frameNo)),{'LFM','Rect','Barker','Frank','P1','P2','P3','P4','Zadoff-Chu'})
+       fprintf("Radar Signal");
         else 
         fprintf("Unknown Signal");      
       end
@@ -1108,108 +1108,101 @@ end
 
 plotScores(score19,modulationTypes)
 
-% %% BRPSKmodFrFtSignal
-% sampleFreq = 100e6;
-% sampleTime = 1/sampleFreq;
-% % sampleTime = 20.5e-9;
-% desSignalTime = 101.1e-6;
-% desSymFreq = 1e6;
-% 
-% rollOff = 0.5;
-% span = 2; % This must be an even number
-% 
-% redPhase = pi/12; % 20 degrees
-% 
-% f0 = 4e6;
-% f1 = 12e6;
-% chirpPhase = 0;
-% Ac = 1;
-% 
-% phi = -pi/4;
-% a = 2*phi/pi;
-% 
-% [sentSignal, timeVec, RRCtransSignal, freqSymbol] = BRPSKmodFrFTsignalGeneration(sampleTime, desSignalTime , desSymFreq, rollOff, span, redPhase, a);
-% % figure;
-% % plot(timeVec, RRCtransSignal);
-% % grid on;
-% 
-% filterCoeffs = rcosdesign(0.35, 4, sps);
-% tx = filter(filterCoeffs, 1, upsample(RRCtransSignal,sps));
-% 
-% 
-% % Channel
-% channel = helperModClassTestChannel(...
-%   'SampleRate',sampleFreq, ...
-%   'SNR',SNR, ...
-%   'PathDelays',[0 1.8 3.4] / sampleFreq, ...
-%   'AveragePathGains',[0 -2 -10], ...
-%   'KFactor',4, ...
-%   'MaximumDopplerShift',4, ...
-%   'MaximumClockOffset',5, ...
-%   'CenterFrequency',900e6);
-% rx = channel(sentSignal);
-% 
-% 
-% % Plot transmitted and received signals
-% scope = dsp.TimeScope(2,200e3,'YLimits',[-1 1],'ShowGrid',true,...
-%   'LayoutDimensions',[2 1],'TimeSpan',45e-3);
-% scope(sentSignal,rx)
-% 
-% % Frame generation for classification
-% unknownFrames = getNNFrames(rx,'Unknown');
-% % Classification
-% [prediction20,score20] = classify(trainedNet20SNR_1a,unknownFrames);
-% 
-% prediction20
-% 
-% plotScores(score20,modulationTypes)
-% 
-% %% BRPSKmodChirpSignal
-% 
-% sampleFreq = 100e6;
-% sampleTime = 1/sampleFreq;
-% desChirpTime = 101.1e-6;
-% desSymFreq = 1e6;
-% 
-% rollOff = 0.5;
-% span = 2; % This must be an even number
-% 
-% redPhase = pi/12; % 20 degrees
-% 
-% f0 = 4e6;
-% f1 = 12e6;
-% chirpPhase = 0;
-% Ac = 1;
-% 
-% [sentSignal, timeVec, RRCtransSignal, complexChirp, freqSymbol] = BRPSKmodChirpSignalGeneration(sampleTime, desChirpTime, desSymFreq, rollOff, span, redPhase, f0, f1, chirpPhase, Ac);
-% 
-% % Square-root raised cosine filter
-% % filterCoeffs = rcosdesign(0.35, 4, 8);
-% % tx = filter(filterCoeffs, 1, upsample(sentSignal,8));
-% 
-% channel = helperModClassTestChannel(...
-%   'SampleRate',sampleFreq, ...
-%   'SNR',SNR, ...
-%   'PathDelays',[0 1.8 3.4] / sampleFreq, ...
-%   'AveragePathGains',[0 -2 -10], ...
-%   'KFactor',4, ...
-%   'MaximumDopplerShift',4, ...
-%   'MaximumClockOffset',5, ...
-%   'CenterFrequency',900e6);
-% rx = channel(RRCtransSignal);
-% % Plot transmitted and received signals
-% scope = dsp.TimeScope(2,200e3,'YLimits',[-1 1],'ShowGrid',true,...
-%   'LayoutDimensions',[2 1],'TimeSpan',45e-3);
-% scope(RRCtransSignal,rx)
-% 
-% % Frame generation for classification
-% unknownFrames = getNNFrames(rx,'Unknown');
-% % Classification
-% [prediction21,score21] = classify(trainedNet20SNR_1a,unknownFrames);
-% 
-% prediction21
-% 
-% plotScores(score21,modulationTypes)
+%% BRPSKmodFrFtSignal
+sampleFreq = 100e6;
+sampleTime = 1/sampleFreq;
+% sampleTime = 20.5e-9;
+desSignalTime = 101.1e-6;
+desSymFreq = 1e6;
+
+rollOff = 0.5;
+span = 2; % This must be an even number
+
+redPhase = pi/12; % 20 degrees
+
+f0 = 4e6;
+f1 = 12e6;
+chirpPhase = 0;
+Ac = 1;
+
+phi = -pi/4;
+a = 2*phi/pi;
+
+[sentSignal, timeVec, RRCtransSignal, freqSymbol] = BRPSKmodFrFTsignalGeneration(sampleTime, desSignalTime , desSymFreq, rollOff, span, redPhase, a);
+% figure;
+% plot(timeVec, RRCtransSignal);
+% grid on;
+% Channel
+channel = helperModClassTestChannel(...
+  'SampleRate',sampleFreq, ...
+  'SNR',SNR, ...
+  'PathDelays',[0 1.8 3.4] / sampleFreq, ...
+  'AveragePathGains',[0 -2 -10], ...
+  'KFactor',4, ...
+  'MaximumDopplerShift',4, ...
+  'MaximumClockOffset',5, ...
+  'CenterFrequency',900e6);
+rx = channel(sentSignal);
+% Plot transmitted and received signals
+scope = dsp.TimeScope(2,200e3,'YLimits',[-1 1],'ShowGrid',true,...
+  'LayoutDimensions',[2 1],'TimeSpan',45e-3);
+scope(sentSignal,rx)
+
+% Frame generation for classification
+unknownFrames = getNNFrames(rx,'Unknown');
+% Classification
+[prediction20,score20] = classify(trainedNet20SNR_1a,unknownFrames);
+
+prediction20
+
+plotScores(score20,modulationTypes)
+
+%% BRPSKmodChirpSignal
+
+sampleFreq = 100e6;
+sampleTime = 1/sampleFreq;
+desChirpTime = 101.1e-6;
+desSymFreq = 1e6;
+
+rollOff = 0.5;
+span = 2; % This must be an even number
+
+redPhase = pi/12; % 20 degrees
+
+f0 = 4e6;
+f1 = 12e6;
+chirpPhase = 0;
+Ac = 1;
+
+[sentSignal, timeVec, RRCtransSignal, complexChirp, freqSymbol] = BRPSKmodChirpSignalGeneration(sampleTime, desChirpTime, desSymFreq, rollOff, span, redPhase, f0, f1, chirpPhase, Ac);
+
+% Square-root raised cosine filter
+% filterCoeffs = rcosdesign(0.35, 4, 8);
+% tx = filter(filterCoeffs, 1, upsample(sentSignal,8));
+
+channel = helperModClassTestChannel(...
+  'SampleRate',sampleFreq, ...
+  'SNR',SNR, ...
+  'PathDelays',[0 1.8 3.4] / sampleFreq, ...
+  'AveragePathGains',[0 -2 -10], ...
+  'KFactor',4, ...
+  'MaximumDopplerShift',4, ...
+  'MaximumClockOffset',5, ...
+  'CenterFrequency',900e6);
+rx = channel(RRCtransSignal);
+% Plot transmitted and received signals
+scope = dsp.TimeScope(2,200e3,'YLimits',[-1 1],'ShowGrid',true,...
+  'LayoutDimensions',[2 1],'TimeSpan',45e-3);
+scope(RRCtransSignal,rx)
+
+% Frame generation for classification
+unknownFrames = getNNFrames(rx,'Unknown');
+% Classification
+[prediction21,score21] = classify(trainedNet20SNR_1a,unknownFrames);
+
+prediction21
+
+plotScores(score21,modulationTypes)
 
 %% Subroutines
 function val = randOverInterval(interval)
